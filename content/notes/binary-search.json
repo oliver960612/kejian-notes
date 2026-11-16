@@ -1,0 +1,9 @@
+{
+  "slug":"binary-search","title":"二分搜尋：每次排除一半可能","category":"程式基礎","summary":"從已排序的數列找目標，理解左右邊界如何縮小，以及為什麼沒有排序就不能直接使用二分搜尋。","minutes":5,"updated":"2026-11-16","tags":["演算法","搜尋","Python"],
+  "sections":[
+    {"heading":"核心概念","paragraphs":["二分搜尋先看有序資料的中間位置。如果目標更大，就捨棄左半邊；如果更小，就捨棄右半邊。這裡假設資料由小到大排序，並且可依索引存取。","每輪都縮小搜尋範圍，因此比較次數的成長量級為 O(log n)。這不包含事先排序的成本；單次查找前才排序，未必比直接逐項找更划算。"]},
+    {"heading":"動手看範例","paragraphs":["範例使用含兩端的閉區間 [left, right]。找不到時回傳 −1；有重複值時不保證回傳第一個位置。"],"code":"def binary_search(nums, target):\n    left, right = 0, len(nums) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if nums[mid] == target:\n            return mid\n        if nums[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\n\nprint(binary_search([3, 7, 12, 18, 25], 18))  # 3"},
+    {"heading":"常見誤區","paragraphs":["未排序就搜尋，無法保證被排除的一半真的沒有答案。","邊界設成 mid 而非 mid + 1 或 mid − 1，可能讓範圍不再縮小。閉區間與半開區間的條件不能混用。"]},
+    {"heading":"自我檢核","paragraphs":["題目：在 [3, 7, 12, 18, 25] 搜尋 7，第一次查看索引 2 的 12 後，right 應變成多少？","答案：1。目標小於 12，所以將 right 改成 mid − 1。Python bisect 找的是插入位置，若拿來判定存在，還需要檢查該位置的值。"]}
+  ],"sources":[{"title":"Python 官方文件：bisect 與二分定位","url":"https://docs.python.org/3/library/bisect.html"}]
+}

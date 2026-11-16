@@ -1,0 +1,9 @@
+{
+  "slug":"python-list","title":"從索引開始，讀懂 Python 串列","category":"程式基礎","summary":"用一份成績清單理解索引、切片與可變性，分清楚複製一份資料和指向同一份資料的差別。","minutes":4,"updated":"2026-11-16","tags":["Python","串列","索引"],
+  "sections":[
+    {"heading":"核心概念","paragraphs":["串列（list）用順序收納多個值。索引從 0 起算，因此長度為 n 的串列，最後一個正索引是 n − 1；負索引 −1 表示最後一項。","串列可以修改。把一個串列指定給另一個變數，不會自動複製內容；兩個變數可能指向同一個物件。切片 scores[:] 則會建立淺拷貝。"]},
+    {"heading":"動手看範例","paragraphs":["下面使用虛構的三筆分數。切片 [0:2] 包含索引 0、1，不包含結束位置 2。"],"code":"scores = [72, 85, 91]\nprint(scores[0])     # 72\nprint(scores[-1])    # 91\nprint(scores[0:2])   # [72, 85]\n\nbackup = scores[:]\nscores.append(88)\nprint(backup)        # [72, 85, 91]"},
+    {"heading":"常見誤區","paragraphs":["scores[len(scores)] 超出範圍；長度不是最後一項的索引。","backup = scores 只會共用串列。另須注意，淺拷貝不會遞迴複製巢狀串列內的物件。"]},
+    {"heading":"自我檢核","paragraphs":["題目：a = [10, 20, 30, 40]，a[1:3] 的結果是什麼？","答案：[20, 30]。起點包含、終點不包含，實際取出索引 1 和 2。"]}
+  ],"sources":[{"title":"Python 官方教學：Data Structures","url":"https://docs.python.org/3/tutorial/datastructures.html"}]
+}

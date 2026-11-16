@@ -1,0 +1,9 @@
+{
+  "slug":"git-snapshots","title":"Git 三個位置：修改、暫存、提交","category":"學習方法","summary":"把工作目錄、暫存區與提交紀錄分清楚，用小而明確的 commit 留下每一次可以說明原因的修改。","minutes":4,"updated":"2026-11-16","tags":["Git","版本控制","專案管理"],
+  "sections":[
+    {"heading":"核心概念","paragraphs":["工作目錄是目前正在修改的檔案；暫存區準備下一次提交的內容；commit 則記錄一次版本快照。git add 是把當時的檔案內容放進暫存區。","commit 後才繼續修改的內容，不會自動進入先前的提交。Git 與 GitHub 也不同：本機提交尚未等於已推送到遠端。"]},
+    {"heading":"動手看範例","paragraphs":["在已有 Git 倉庫的專案內，先檢查差異，再只暫存本次要交付的內容。下方指令不包含上傳。"],"code":"git status\ngit diff\ngit add content/notes/python-list.json\ngit diff --cached\ngit commit -m \"補上串列切片與檢核範例\"\ngit status"},
+    {"heading":"常見誤區","paragraphs":["git add 後又修改檔案，暫存區仍保留先前那個版本；需要再次 add 才會納入新修改。","不要把密碼、Token 或不屬於專案的個人資料提交。上傳前先檢查暫存區，不能只靠檔名猜內容。"]},
+    {"heading":"自我檢核","paragraphs":["題目：修改 README、執行 git add README.md，再改一次 README，commit 會記錄哪一版？","答案：記錄 add 當下的內容；後來的修改仍留在工作目錄。用 git diff 與 git diff --cached 可分別查看未暫存和已暫存差異。"]}
+  ],"sources":[{"title":"Git 官方教學：gittutorial","url":"https://git-scm.com/docs/gittutorial"}]
+}

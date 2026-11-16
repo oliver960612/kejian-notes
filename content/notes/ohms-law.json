@@ -1,0 +1,9 @@
+{
+  "slug":"ohms-law","title":"歐姆定律：先看單位，再代公式","category":"電路觀念","summary":"以理想電阻的直流計算練習 V = IR，從電流到功率，把單位、假設與計算結果放在同一條思路上。","minutes":4,"updated":"2026-11-16","tags":["電壓","電流","電阻"],
+  "sections":[
+    {"heading":"核心概念","paragraphs":["對符合歐姆定律的電阻，在條件固定時，電壓 V、電流 I、電阻 R 具有 V = IR 的關係。單位依序為伏特（V）、安培（A）、歐姆（Ω）。","公式描述有條件的元件模型，不能直接把二極體等非線性元件視為固定電阻。本篇使用理想直流電源與理想電阻，數字是理論示例，並非實測。"]},
+    {"heading":"動手看範例","paragraphs":["假設 5 V 理想電源兩端接上 1 kΩ 電阻，先把 1 kΩ 換成 1000 Ω，再計算電流與消耗功率。"],"code":"V = 5 V\nR = 1 kΩ = 1000 Ω\nI = V / R = 5 / 1000 A = 0.005 A = 5 mA\nP = VI = 5 × 0.005 W = 0.025 W = 25 mW"},
+    {"heading":"常見誤區","paragraphs":["把 kΩ 當成 Ω，會讓電流算大 1000 倍。計算完先檢查量級，通常比反覆按計算機更有用。","理論值與實際量測可能因元件公差、溫度及電源條件而不同。未量測時，不應把算出的 5 mA 稱為實測值。"]},
+    {"heading":"自我檢核","paragraphs":["題目：電壓維持 5 V，電阻改為 2 kΩ，電流是多少？","答案：I = 5 / 2000 A = 2.5 mA。固定電壓下，電阻加倍，電流減半。"]}
+  ],"sources":[{"title":"OpenStax University Physics Volume 2：Ohm’s Law","url":"https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law"}]
+}

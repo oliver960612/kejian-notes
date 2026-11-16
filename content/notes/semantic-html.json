@@ -1,0 +1,9 @@
+{
+  "slug":"semantic-html","title":"HTML 語意：讓結構也說得清楚","category":"程式基礎","summary":"用 header、main、article 與 button 組成可理解的網頁，讓內容結構與互動方式對讀者及輔助工具都清楚。","minutes":3,"updated":"2026-11-16","tags":["HTML","語意","無障礙"],
+  "sections":[
+    {"heading":"核心概念","paragraphs":["語意元素不只決定外觀，也描述內容的角色。main 代表頁面的主要內容，article 表示可獨立理解的內容，nav 則是一組主要導覽。","使用原生連結進行導覽，使用 button 觸發操作。正確標記能讓鍵盤操作與輔助工具更容易理解網頁，但仍需檢查標籤、焦點及對比。"]},
+    {"heading":"動手看範例","paragraphs":["以下是一篇筆記的基本骨架。標題層級由 h1 到 h2，閱讀標記是操作，因此選擇 button。"],"code":"<main>\n  <article>\n    <h1>一篇清楚的筆記</h1>\n    <button type=\"button\" aria-pressed=\"false\">\n      標記已讀\n    </button>\n    <section>\n      <h2>核心概念</h2>\n      <p>每篇筆記處理一個問題。</p>\n    </section>\n  </article>\n</main>"},
+    {"heading":"常見誤區","paragraphs":["把可點擊的 div 當按鈕，還要自己處理鍵盤、焦點與角色，容易漏掉重要行為。","標題層級依內容結構安排，不應只為了字體大小跳級；外觀大小交給 CSS。"]},
+    {"heading":"自我檢核","paragraphs":["題目：跳到下一篇文章與切換已讀狀態，分別應使用什麼元素？","答案：前者使用含 href 的 a；後者使用 button，並以 aria-pressed 表達切換狀態。"]}
+  ],"sources":[{"title":"MDN：Semantics 語意","url":"https://developer.mozilla.org/en-US/docs/Glossary/Semantics"}]
+}
