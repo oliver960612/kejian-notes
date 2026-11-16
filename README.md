@@ -1,6 +1,6 @@
 # 課間筆記｜資電學習知識庫
 
-以繁體中文重新整理資電入門概念，讓每篇筆記都能被搜尋、閱讀及延伸。由劉譯棋製作，AI 輔助內容整理與程式開發。
+重新整理資電入門概念，讓每篇筆記都能被搜尋、閱讀及延伸。由劉譯棋製作，AI 輔助內容整理與程式開發。
 
 - 公開網站：https://kejian-notes-20261116.oliver960612.chatgpt.site
 - GitHub Repository：https://github.com/oliver960612/kejian-notes
