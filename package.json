@@ -1,0 +1,9 @@
+{
+  "name": "kejian-notes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "課間筆記：可由 AGENTS.md 延伸的資電學習知識庫",
+  "scripts": {"build": "node src/build.mjs", "check": "node scripts/check.mjs", "start": "node scripts/serve.mjs"},
+  "engines": {"node": ">=20"}
+}
